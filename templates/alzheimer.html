@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% set active_page = 'alzheimer' %}
+{% block title %}Alzheimer Detection — HealthCure AI{% endblock %}
+{% block hero %}
+<section class="hero-panel">
+  <div class="container">
+    <div class="col-lg-7">
+      <div class="hero-badge">Detection Module</div>
+      <h1 class="display-6 fw-bold">Alzheimer <span class="gradient-text">Analysis</span></h1>
+      <p class="lead">Upload your medical image and receive an AI-powered result in seconds.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block content %}
+<div class="row gy-4">
+  <div class="col-lg-7 reveal">
+    <div class="glass-card p-4 p-lg-5">
+      <h2 class="h6 mb-4 text-cyan" style="text-transform:uppercase;letter-spacing:0.1em;">Upload Scan</h2>
+      <form action="resulta" method="POST" enctype="multipart/form-data">
+        <div class="mb-4">
+          <label class="form-label" for="file">Medical Image</label>
+          <input type="file" class="form-control" id="file" name="file" required accept="image/*">
+        </div>
+        <div id="uploadPreview" class="upload-zone mb-4">
+          <div class="upload-icon">⬆</div>
+          <span style="font-size:0.85rem;">Drop image here or click to browse</span>
+          <span class="small">PNG, JPG, JPEG accepted</span>
+        </div>
+        <button type="submit" class="btn btn-glow w-100">Run AI Analysis →</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-lg-5 reveal reveal-delay-1">
+    <div class="glass-card p-4 h-100">
+      <h3 class="h6 mb-3 text-cyan" style="text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;">How it works</h3>
+      <div class="d-flex flex-column gap-3">
+        <div class="d-flex gap-3 align-items-start">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.3);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:0.75rem;font-weight:700;flex-shrink:0;">1</div>
+          <div><p class="mb-0" style="font-size:0.88rem;color:var(--text);">Upload your scan image</p><p class="small mb-0">JPEG or PNG, any resolution</p></div>
+        </div>
+        <div class="d-flex gap-3 align-items-start">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.3);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:0.75rem;font-weight:700;flex-shrink:0;">2</div>
+          <div><p class="mb-0" style="font-size:0.88rem;color:var(--text);">CNN model processes the image</p><p class="small mb-0">Deep learning inference in ~1-3s</p></div>
+        </div>
+        <div class="d-flex gap-3 align-items-start">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.3);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:0.75rem;font-weight:700;flex-shrink:0;">3</div>
+          <div><p class="mb-0" style="font-size:0.88rem;color:var(--text);">Instant result with confidence</p><p class="small mb-0">Clear positive/negative output</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
