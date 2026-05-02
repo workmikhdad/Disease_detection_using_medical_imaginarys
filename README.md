@@ -28,3 +28,47 @@ It aims to assist in early diagnosis by providing fast and accurate predictions.
 ---
 
 ## 📂 Project Structure  
+Disease-Detection/
+│── dataset/ # Training data
+│── model/ # Saved model (.h5)
+│── notebooks/ # Training notebooks
+│── src/ # Core code
+│── app.py # (Optional) Web app
+│── requirements.txt # Dependencies
+│── README.md # Project documentation
+
+
+---
+
+## ⚙️ Installation  
+
+```bash
+git clone https://github.com/workmikhdad/Disease_detection_using_medical_imaginarys
+cd Disease_detection_using_medical_imaginarys
+pip install -r requirements.txt
+
+
+
+▶️ Usage
+python app.py
+
+OR (for notebook):
+
+jupyter notebook
+
+
+---
+
+# 🔥 ADD THESE (VERY IMPORTANT BOOST)
+
+## 1. requirements.txt
+Create file:
+
+```txt
+tensorflow
+keras
+numpy
+pandas
+matplotlib
+opencv-python
+scikit-learn
